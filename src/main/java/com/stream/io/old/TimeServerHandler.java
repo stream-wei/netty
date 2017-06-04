@@ -1,4 +1,4 @@
-package com.stream.netty.old;
+package com.stream.io.old;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,6 +19,11 @@ public class TimeServerHandler implements Runnable {
     }
     
     public void run() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         BufferedReader reader = null;
         PrintWriter printWriter = null;
         try {
